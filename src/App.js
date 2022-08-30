@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './app.css';
+import NavBar from './Components/NavBar';
+
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola, bienvenido a mi e-commerce!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Juan Cruz Dieguez
-        </a>
-      </header>
-    </div>
+    <>
+    <NavBar/>
+      
+    </>
   );
 }
 

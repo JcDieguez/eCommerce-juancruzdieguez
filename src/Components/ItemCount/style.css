@@ -1,8 +1,21 @@
-h2{
-    font-size: 50px;
+.h2{
+    font-size: 40px;
 }
 
-button{
-font-size: 20px;
-justify-items: center;
+.botonesprimarioresta{
+    font-size: 30px;
+    color: rgb(21, 13, 46);
+    margin: 5px;
+}
+
+.botonesprimariosuma{
+    font-size: 30px;
+    color: rgb(21, 13, 46);
+}
+
+.botoncarrito{
+    font-size: 30px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    background-color: green;
 }

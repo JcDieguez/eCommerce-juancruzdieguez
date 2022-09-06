@@ -1,7 +1,6 @@
 import './App.css';
 import NavBar from './Components/NavBar';
-import ItemCount from './Components/ItemCount';
-import ItemListConteiner from './Components/ItemListConteiner';
+import ItemListContainer from './containers/ItemListContainer';
 
 function App() {
 
@@ -10,8 +9,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ItemCount/>
-    <ItemListConteiner greeting={"hamburguesa triple xxl"}/>
+    <ItemListContainer greeting={"Hola! Bienvenido a nuestra app!"}/>
     </>
   );
 }

@@ -1,11 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import './style.css'
 
 const Item = ({product}) => {
+  const navegar = useNavigate();
+
+
+
   return (
-    <div class="card">
-<img style={{width: "200px"}} src={product.img} alt="Avatar"/> 
-    <h4><b>{product.id}</b></h4>
-    <p>{product.description}</p>
+    <div className='card-container'>
+<img className="card-img" src={product.img} alt="Menu"/> 
+    <p className='card-descripcion'>{product.description}</p>
+    <button className='btn btn-success' onClick={()=> navegar(`/detalle/${product.id}`)}>Ver Mas</button>
   </div>
     
   )

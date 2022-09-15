@@ -1,20 +1,20 @@
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+  height: 500px;
+  padding: 2px 16px;
+  cursor: pointer;
   }
   
   /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 2px 16px;
+  .card-img:hover {
+    box-shadow: 2px 8px 40px 10px rgba(0, 0, 0, 0.2);
   }
 
-.img1{
-  width: 2px;
-  height: 2px;
+.card-descripcion{
+  font-size: 16px;
 }
+

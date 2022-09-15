@@ -1,11 +1,11 @@
 import React from 'react'
 import ItemCount from '../ItemCount'
-
+import { useNavigate } from 'react-router-dom'
 
 
 
 const ItemDetail = ({ product }) => {
-  
+  const retroceder = useNavigate();
 
   return (
 
@@ -20,6 +20,8 @@ const ItemDetail = ({ product }) => {
       <p>{product.description}</p>
 
       <ItemCount stock={product.stock} initial={1} />
+      
+      <button className='btn btn-info' onClick={()=> retroceder('/productos')}>Retroceder</button>
 
     </div>
 

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import {products} from '../../data/products';
 import ItemList from '../../Components/ItemList'
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({greeting}) => {
 
   const [productos, setProductos] = useState([])
+  const { tipocategoria } = useParams();
 
   //La promise se ejecuta una única vez cuando se monta el componente
   useEffect(()=> {
@@ -14,28 +16,29 @@ const ItemListContainer = ({greeting}) => {
     const obtenerProductos = new Promise ((accept, reject)=> {
         setTimeout(()=> {
           accept(products)
-        }, 3000);
+        }, 0);
       })
-      
-        /* obtenerProductos
-          .then((result) => {
-            console.log(result)
-            setProductos(result)
-          })
-          .catch((error) => console.log(error)) */
 
         try {
-          const productos = await obtenerProductos;
-          setProductos(productos);
+
+          if (!tipocategoria){
+            const productos = await obtenerProductos;
+            setProductos(productos + tipocategoria);
+          }
+          
+          else{
+            const productos = await obtenerProductos;
+            setProductos(productos.filter((prod)=> prod.category === tipocategoria));
+
+          }
         } catch (error) {
           console.log(error);
         }
 
       })()
 
-  }, [])
+  }, [tipocategoria])
 
-  console.log(productos)
 
   return (
     <div className='item-list-container'>

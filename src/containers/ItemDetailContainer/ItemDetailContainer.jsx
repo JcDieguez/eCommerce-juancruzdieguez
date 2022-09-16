@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
                   accept(products)
 
-                }, 3000);
+                }, 0);
 
               })
 

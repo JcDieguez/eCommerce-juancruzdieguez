@@ -27,9 +27,9 @@ const NavBar = () => {
                             Menu
                             </Link>
                             <ul class="dropdown-menu">
-                                <li><Link class="dropdown-item" to="/productos/">Hamburguesas</Link></li>
-                                <li><Link class="dropdown-item" to="/productos/">Pizzas</Link></li>
-                                <li><Link class="dropdown-item" to="/productos/">Bebidas</Link></li>
+                                <li><Link class="dropdown-item" to="/category/hamburguesa">Hamburguesas</Link></li>
+                                <li><Link class="dropdown-item" to="/category/pizza">Pizzas</Link></li>
+                                <li><Link class="dropdown-item" to="/category/bebidas">Bebidas</Link></li>
                             </ul>
                         </li>
                         <CartWidget />

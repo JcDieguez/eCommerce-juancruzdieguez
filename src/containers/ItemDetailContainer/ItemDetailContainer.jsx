@@ -44,7 +44,7 @@ const ItemDetailContainer = () => {
 
                 } catch (error) {
 
-                  console.log(error);
+                 
 
                 }
 
@@ -62,7 +62,7 @@ const ItemDetailContainer = () => {
 
 
 
-    console.log(id);
+   
 
 
 

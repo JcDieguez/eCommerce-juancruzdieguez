@@ -23,7 +23,7 @@ const ItemListContainer = ({greeting}) => {
 
           if (!tipocategoria){
             const productos = await obtenerProductos;
-            setProductos(productos + tipocategoria);
+            setProductos(productos);
           }
           
           else{
@@ -32,7 +32,7 @@ const ItemListContainer = ({greeting}) => {
 
           }
         } catch (error) {
-          console.log(error);
+         
         }
 
       })()

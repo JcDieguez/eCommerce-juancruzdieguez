@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemCount from '../ItemCount'
 import { useNavigate } from 'react-router-dom'
-
+import './style.css';
 
 
 const ItemDetail = ({ product }) => {
   const retroceder = useNavigate();
-  
+  const navigate = useNavigate();
+
+  const [qty, setQty] = useState(0);
+  const addCart = (quantity) => {
+    setQty(quantity);
+  }
+  const handleFinish = () =>{
+navigate('/cart');
+  }
+
+
 
   return (
 
@@ -20,9 +30,11 @@ const ItemDetail = ({ product }) => {
 
       <p>{product.description}</p>
 
-      <ItemCount stock={product.stock} initial={1} />
-      
-      <button className='btn btn-info' onClick={()=> retroceder('/productos')}>Retroceder</button>
+      {qty ? (
+        <button className='buttonFinish'  onClick={handleFinish}>Finalizar compra</button>) : (
+        <ItemCount stock={product.stock} initial={1} onAdd={addCart} />)}
+
+      <button className='btn btn-info' onClick={() => retroceder('/productos')}>Retroceder</button>
 
     </div>
 

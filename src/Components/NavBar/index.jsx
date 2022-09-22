@@ -24,12 +24,18 @@ const NavBar = () => {
                         </li>
                         <li class="nav-item dropdown">
                             <Link class="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Menu
+                                Menu
                             </Link>
                             <ul class="dropdown-menu">
+
                                 <li><Link class="dropdown-item" to="/category/hamburguesa">Hamburguesas</Link></li>
+
                                 <li><Link class="dropdown-item" to="/category/pizza">Pizzas</Link></li>
+
                                 <li><Link class="dropdown-item" to="/category/bebidas">Bebidas</Link></li>
+
+                                <li><Link class="dropdown-item" to="/productos">Todos los productos</Link></li>
+
                             </ul>
                         </li>
                         <CartWidget />

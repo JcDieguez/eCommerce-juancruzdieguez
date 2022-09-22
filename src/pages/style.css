@@ -1,8 +1,14 @@
 .divhome{
-
+    text-align: center;
 }
 
 .titulohome{
-        text-align: center;
-    background-color: aquamarine;
+
 }
+
+.clicktitulo{
+    font-size: 60px;
+background-color: rgb(0, 0, 0);
+color: white;
+}
+

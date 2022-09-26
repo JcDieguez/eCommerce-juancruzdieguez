@@ -2,10 +2,15 @@ import React from 'react'
 import CartWidget from '../CartWidget';
 import './style.css';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/ShopProvedor';
+
 
 
 const NavBar = () => {
 
+    const {cart} = useCart()
+    console.log(cart)
+    
 
     return (
         <nav class="navbar navbar-expand-lg bg-light">

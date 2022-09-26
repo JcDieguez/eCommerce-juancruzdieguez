@@ -1,4 +1,5 @@
 import React from 'react'
+import { useContext } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
 
@@ -33,19 +34,31 @@ const ShopProvedor = ({children}) => {
         return cart.some(product => product.id === id)
     }
 
-    const removeItem = (id) => {
-        setCart(cart.filter((prod) => prod.id !== id))
+    const removeItem = (itemToRemove) => {
+        const filteredProducts = cart.filter(item => item !== itemToRemove);
+        setCart(filteredProducts)
     }
 
     const clearCart = () => {
-        setCart([])
+        setCart([]);
+    }
+
+    const cartQuantity = () => {
+        return cart.reduce((acc, prod) => acc += prod.quantity,0)
+    }
+
+    const cartTotal = () => {
+        return cart.reduce((acc, prod) => acc += prod.price * prod.quantity, 0)
     }
 
     return (
-        <Shop.Provider value={{cart, addItem, isInCart, removeItem, clearCart}}>
+        <Shop.Provider value={{cart, addItem, isInCart, removeItem, clearCart, cartQuantity, cartTotal}}>
             {children}
         </Shop.Provider>
     )
 }
+
+
+export const useCart = () => useContext(Shop)
 
 export default ShopProvedor;

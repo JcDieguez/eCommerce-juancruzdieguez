@@ -32,7 +32,8 @@ const ItemDetail = ({ product }) => {
 
       <img style={{ width: "200px" }} src={product.img} alt="Avatar" />
 
-      <h2>stock unidades: {product.stock}</h2>
+      <h2>Precio: {product.price}</h2>
+      <h3>cantidad: {product.stock}</h3>
 
       <p>{product.description}</p>
 

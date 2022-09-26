@@ -26,6 +26,7 @@ const Cart = () => {
     { field: 'image', headerName: 'Imagen', width: 250, renderCell: renderImage},
     { field: 'title', headerName: 'Producto', width: 450 },
     { field: 'quantity', headerName: 'Cantidad', width: 80 },
+    { field: 'price', headerName: 'Precio', width: 80 },
     {
       field: 'remove',
       headerName: 'Eliminar',
@@ -42,6 +43,7 @@ const Cart = () => {
       image: item.img,
       title: item.name,
       quantity: item.quantity,
+      price: item.price,
       remove: item,
     })
   })

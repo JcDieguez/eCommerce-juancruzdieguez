@@ -2,10 +2,12 @@ import React, { useContext } from 'react'
 import { Shop } from '../../context/ShopProvedor';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
+import ordenGenerada from "../../services/ordenGenerada";
+
 
 const Cart = () => {
 
-  const {cart, removeItem, clearCart} = useContext(Shop);
+  const {cart, removeItem, clearCart, total} = useContext(Shop);
 
   const renderImage = (image) => {
     return(
@@ -21,6 +23,14 @@ const Cart = () => {
       </Button>
     )
   }
+
+  const handleBuy = () => {
+    const totalcarrito = total();
+    const orden = ordenGenerada("Juan Cruz", "jc@dieguez.com", cart, totalcarrito);
+    console.log(orden)
+  }
+
+
 
   const columns = [
     { field: 'image', headerName: 'Imagen', width: 250, renderCell: renderImage},
@@ -55,9 +65,10 @@ const Cart = () => {
         columns={columns}
         pageSize={10}
         rowsPerPageOptions={[10]}
-        rowHeight={'150px'}
+        rowHeight={150}
       />
       <Button onClick={clearCart} color="error" variant="outlined">Vaciar productos</Button>
+      <button onClick={handleBuy}>Confirmar compra</button>
     </div>
   );
 }

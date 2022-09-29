@@ -26,7 +26,7 @@ const Cart = () => {
 
   const handleBuy = () => {
     const totalcarrito = total();
-    const orden = ordenGenerada("Juan Cruz", "jc@dieguez.com", cart, totalcarrito);
+    const orden = ordenGenerada("Juan Cruz", "jc@dieguez.com","12313213", cart, totalcarrito);
     console.log(orden)
   }
 
@@ -59,7 +59,10 @@ const Cart = () => {
   })
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <>
+    {!cart.length 
+    ?<div>Carrito vacio</div>
+      :<div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={filas}
         columns={columns}
@@ -67,9 +70,11 @@ const Cart = () => {
         rowsPerPageOptions={[10]}
         rowHeight={150}
       />
+      <p>Total a Pagar :  {total()} </p>
       <Button onClick={clearCart} color="error" variant="outlined">Vaciar productos</Button>
       <button onClick={handleBuy}>Confirmar compra</button>
-    </div>
+    </div>}
+    </>
   );
 }
 

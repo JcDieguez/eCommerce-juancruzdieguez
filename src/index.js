@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import ShopProvedor from './context/ShopProvedor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+        <ShopProvedor>
+    
     <App />
-  </React.StrictMode>
+
+    </ShopProvedor>
 );
 

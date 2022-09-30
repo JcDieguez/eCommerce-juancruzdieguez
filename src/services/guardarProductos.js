@@ -18,11 +18,11 @@ const algoritmoGuardadoAutomático = async () => {
                 image: producto.image,
                 stock: 20,
             });
-            console.log("Document written with ID: ", docRef.id);
+            
         })
         
     } catch (error) {
-        console.log(error)
+       
     }
 }
 

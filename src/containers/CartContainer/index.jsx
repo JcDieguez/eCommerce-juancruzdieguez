@@ -30,7 +30,6 @@ const Cart = () => {
   const handleBuy = async () => {
     const totalcarrito = total();
     const orden = ordenGenerada("Juan Cruz", "jc@dieguez.com", "12313213", cart, totalcarrito);
-    console.log(orden);
 
     // Add a new document with a generated id.
     const docRef = await addDoc(collection(db, "orders"), orden);

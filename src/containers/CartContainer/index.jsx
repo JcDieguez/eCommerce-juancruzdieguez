@@ -38,7 +38,7 @@ const Cart = () => {
 
     // actualizamos el stock del producto despues de generar la compra.
     cart.forEach(async (productoEnCarrito) => {
-      
+
       //Accedemos a la referencia del produc
       const productoRef = doc(db, "products", productoEnCarrito.id);
 
@@ -47,13 +47,21 @@ const Cart = () => {
       const productoSnap = await getDoc(productoRef)
 
       //en snapshot.data nos devuelve la info del doc a actualizar
+
       await updateDoc(productoRef,
+
         { stock: productoSnap.data().stock - productoEnCarrito.quantity, });
+
     })
 
+    clearCart()
+
     alert(
+
       `Gracias por su compra! La orgen generada con ID: ${docRef.id}`
+
     );
+
   }
 
 

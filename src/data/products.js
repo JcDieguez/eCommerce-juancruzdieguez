@@ -1,22 +1,22 @@
 export const products = [
     {
         id: 1,
-        description: "Pizza de panceta y verdeo",
-        name: "Pizza XL",
+        description: "128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor | Gorilla Glass with high quality display",
+        name: "Apple iPhone XR (Red, 128 GB)",
         stock: 10,
         price: 1050,
-        img: 'https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2021/03/30/6063031b90a87.r_d.1083-871-0.jpeg',
-        category: 'pizza'
+        img: 'https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-xr-red.png?v=6',
+        category: 'iphone'
     },
 
     {
         id: 2,
-        description: "Hamburguesa doble medallon, barbacoa y cheddar",
-        name: "Hamburguesa",
-        stock: 8,
+        description: "El iPhone XS Max es la vuelta al pasado de Apple pero con toda la actualidad de un diseño sin marcos y con panel OLED.",
+        name: "Apple iPhone XS MAX (Green, 64 GB)",
+        stock: 2,
         price: 950,
-        img: 'https://www.pequerecetas.com/wp-content/uploads/2013/07/hamburguesas-caseras-receta.jpg',
-        category: 'hamburguesa'
+        img: 'https://http2.mlstatic.com/D_NQ_NP_786357-MLA43761512037_102020-O.jpg',
+        category: 'iphone'
     },
     {
         id: 3,

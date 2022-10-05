@@ -43,7 +43,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <button className='botonesprimariosuma' onClick={handleAdd}>+</button>
         <h2 className='h2'>{count}</h2>
 
-        <button className='botoncarrito' onClick={addCart}>Agregar al carrito</button>
+        <button className='añadirbtn1' onClick={addCart}>Seleccionar Unidad</button>
     </div>
     );
 };

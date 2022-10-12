@@ -6,7 +6,7 @@ import ordenGenerada from "../../services/ordenGenerada";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
-
+import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -95,7 +95,9 @@ const Cart = () => {
   return (
     <>
       {!cart.length
-        ? <div>Carrito vacio</div>
+        ? <div><b>No hay productos agregados. ¿Quieres añadir un producto nuevo?</b>
+                <NavLink to="/productos" className='home-button'>
+        <h4>Ver productos</h4></NavLink></div>
         : <div style={{ height: 400, width: '100%' }}>
           <DataGrid
             rows={filas}

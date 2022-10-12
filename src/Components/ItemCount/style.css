@@ -23,3 +23,54 @@
   .añadirbtn1:hover {
     background-color: #1b2d42;
   }
+
+
+  .botonesprimarioresta{
+    font-size: 30px;
+    color: rgb(21, 13, 46);
+    margin: 5px;
+}
+
+.botonesprimariosuma{
+    font-size: 30px;
+    color: rgb(21, 13, 46);
+}
+
+.añadirbtn1 {
+    display: inline-block;
+    background-color: #201414;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 2px;
+    transition: all .5s;
+  }
+  .añadirbtn1:hover {
+    background-color: #1b2d42;
+  }
+
+.product-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-botones{
+  margin-bottom: 13mm;
+}
+
+.contador{
+  align-items: center;
+  display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5mm;
+}
+
+.btn-dark-ligth{
+  border-color: black;
+  height: 2em;
+}
+.h2-contador{
+font-size:large;
+}

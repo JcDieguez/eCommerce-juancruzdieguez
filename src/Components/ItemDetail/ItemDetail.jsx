@@ -47,33 +47,13 @@ const ItemDetail = ({ product }) => {
 
    <div class="product-configuration">
 
-	 <div class="product-color">
-	   <span>Color</span>
 
-	   <div class="color-choose">
-		 <div>
-		   <input data-image="red" type="radio" id="red" name="color" value="red" checked/>
-		   <label for="red"><span></span></label>
-		 </div>
-		 <div>
-		   <input data-image="blue" type="radio" id="blue" name="color" value="blue"/>
-		   <label for="blue"><span></span></label>
-		 </div>
-		 <div>
-		   <input data-image="black" type="radio" id="black" name="color" value="black"/>
-		   <label for="black"><span></span></label>
-		 </div>
-	   </div>
-
-	 </div>
 
 	 <div class="cable-config">
 	   <span>Almacenamiento</span>
 
 	   <div class="cable-choose">
 		 <button>{product.gb}</button>
-		 <button>{product.gb1}</button>
-		 <button>{product.gb2}</button>
 	   </div>
 
 	   <p>Cantidad disponible: {product.stock}</p>

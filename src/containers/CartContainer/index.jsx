@@ -7,6 +7,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
 import { NavLink } from 'react-router-dom';
+import './style.css'
 
 const Cart = () => {
 
@@ -95,7 +96,7 @@ const Cart = () => {
   return (
     <>
       {!cart.length
-        ? <div><b>No hay productos agregados. ¿Quieres añadir un producto nuevo?</b>
+        ? <div  className='textocart'><b>No hay productos agregados. ¿Quieres añadir un producto nuevo?</b>
                 <NavLink to="/productos" className='home-button'>
         <h4>Ver productos</h4></NavLink></div>
         : <div style={{ height: 400, width: '100%' }}>
